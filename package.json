@@ -1,0 +1,27 @@
+{
+  "name": "sabado2604",
+  "version": "1.0.0",
+  "main": "index.js",
+  "test": "echo \"Error: no test specified\" && exit 1"
+  ,
+  "author": "Fernando de Leon",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "scripts": {
+    "start": "node build/src/indesx",
+    "build": "tsc",
+    "dev": "nodemon --watch src --ext js,json,ts --ignore src/**/*.spec.ts --ignore src/**/*.test.ts --exec ts-node src/index.ts"
+  },
+  "nodemonConfig": {
+    "watch": ["src"],
+    "ext": "js,json,ts",
+    "ignore": ["src/**/*.spec.ts", "src/**/*.test.ts"],
+    "exec": "ts-node src/index.ts"
+  }
+
+}
